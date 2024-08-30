@@ -26,4 +26,23 @@ const uploadOnCloudinary = async (localFilePath) => {
   }
 };
 
-export { uploadOnCloudinary };
+const deleteFromCloudinary = async (imageURL) => {
+  const publicId = getPublicId(imageURL);
+  await cloudinary.uploader.destroy(publicId, (error, result) => {
+    if (error) {
+      throw new ApiError(
+        500,
+        "existing file could not be deleted from cloudinary"
+      );
+    }
+  });
+};
+
+const getPublicId = (imageURL) => {
+  const [, publicIdWithExtensionName] = imageURL.split("upload/");
+  const extensionName = path.extname(publicIdWithExtensionName);
+  const publicId = publicIdWithExtensionName.replace(extensionName, "");
+  return publicId;
+};
+
+export { uploadOnCloudinary, deleteFromCloudinary };
