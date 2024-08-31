@@ -2,14 +2,17 @@ import mongoose, { Schema } from "mongoose";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 
-const coverImageSchema = new Schema({
-  url: {
-    type: String,
+const imageSchema = new Schema(
+  {
+    url: {
+      type: String, // cloudinary url
+    },
+    public_id: {
+      type: String, // cloudinary public_id
+    },
   },
-  public_id: {
-    type: String,
-  },
-});
+  { _id: false }
+);
 
 const userSchema = new Schema(
   {
@@ -35,11 +38,11 @@ const userSchema = new Schema(
       index: true,
     },
     avatar: {
-      type: String, //cloudinary url
+      type: imageSchema,
       required: true,
     },
     coverImage: {
-      type: coverImageSchema,
+      type: imageSchema,
     },
     watchHistory: [
       {

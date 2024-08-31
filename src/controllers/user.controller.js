@@ -79,7 +79,7 @@ const registerUser = asyncHandler(async (req, res) => {
 
   const user = await User.create({
     fullName,
-    avatar: avatar.url,
+    avatar: { url: avatar.url, public_id: avatar.public_id },
     coverImage: {
       url: coverImage?.url || "",
       public_id: coverImage?.public_id,
@@ -282,9 +282,22 @@ const updateUserAvatar = asyncHandler(async (req, res) => {
     throw new ApiError(400, "Avatar file is missing");
   }
 
-  const avatar = await uploadOnCloudinary(avatarLocalPath);
+  // const avatar = await uploadOnCloudinary(avatarLocalPath);
 
-  if (!avatar.url) {
+  let prevAvatar, newAvatar;
+  try {
+    [prevAvatar, newAvatar] = await Promise.all([
+      deleteFromCloudinary(req.user?.avatar?.public_id),
+      uploadOnCloudinary(avatarLocalPath),
+    ]);
+  } catch (error) {
+    throw new ApiError(
+      500,
+      "Error while creating new avatar image and deleting previous avatar image"
+    );
+  }
+
+  if (!newAvatar.url) {
     throw new ApiError(500, "Error while uploading on avatar");
   }
 
@@ -292,7 +305,7 @@ const updateUserAvatar = asyncHandler(async (req, res) => {
     req.user?._id,
     {
       $set: {
-        avatar: avatar.url,
+        avatar: { url: newAvatar.url, public_id: newAvatar.public_id },
       },
     },
     { new: true }
