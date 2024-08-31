@@ -1,5 +1,6 @@
 import { v2 as cloudinary } from "cloudinary";
 import fs from "fs";
+import path from "path";
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -26,23 +27,8 @@ const uploadOnCloudinary = async (localFilePath) => {
   }
 };
 
-const deleteFromCloudinary = async (imageURL) => {
-  const publicId = getPublicId(imageURL);
-  await cloudinary.uploader.destroy(publicId, (error, result) => {
-    if (error) {
-      throw new ApiError(
-        500,
-        "existing file could not be deleted from cloudinary"
-      );
-    }
-  });
-};
-
-const getPublicId = (imageURL) => {
-  const [, publicIdWithExtensionName] = imageURL.split("upload/");
-  const extensionName = path.extname(publicIdWithExtensionName);
-  const publicId = publicIdWithExtensionName.replace(extensionName, "");
-  return publicId;
+const deleteFromCloudinary = async (public_id) => {
+  return await cloudinary.uploader.destroy(public_id);
 };
 
 export { uploadOnCloudinary, deleteFromCloudinary };
