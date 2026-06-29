@@ -658,11 +658,9 @@ const generateAIUsername = asyncHandler(async (req, res) => {
   let username = "";
   let isUnique = false;
 
-  // Try AI generation exactly ONCE to avoid rate limits
   try {
     username = await generateUsernameAI();
 
-    // Check if the AI name is unique
     if (isClean(username)) {
       const existingUser = await User.findOne({ username });
       if (!existingUser) {

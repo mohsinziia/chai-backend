@@ -4,11 +4,11 @@ import mongooseAggregatePaginate from "mongoose-aggregate-paginate-v2";
 const fileSchema = new Schema(
   {
     url: {
-      type: String, // cloudinary url
+      type: String,
       required: true,
     },
     public_id: {
-      type: String, // cloudinary public_id
+      type: String,
     },
   },
   { _id: false }
@@ -18,9 +18,11 @@ const videoSchema = new Schema(
   {
     videoFile: {
       type: fileSchema,
+      required: true,
     },
     thumbnail: {
       type: fileSchema,
+      required: true,
     },
     title: {
       type: String,

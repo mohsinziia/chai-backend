@@ -5,10 +5,10 @@ import bcrypt from "bcrypt";
 const imageSchema = new Schema(
   {
     url: {
-      type: String, // cloudinary url
+      type: String,
     },
     public_id: {
-      type: String, // cloudinary public_id
+      type: String,
     },
   },
   { _id: false }

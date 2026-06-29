@@ -540,3 +540,119 @@ Error: User does not exist
 Error: Invalid user credentials
     at file:///Users/mohsinzia/database-project/clustr/src/controllers/user.controller.js:149:11
 
+Error: Unauthorized request
+    at file:///Users/mohsinzia/database-project/clustr/src/middlewares/auth.middleware.js:29:11
+    at file:///Users/mohsinzia/database-project/clustr/src/utils/asyncHandler.js:4:21
+    at Layer.handle [as handle_request] (/Users/mohsinzia/database-project/clustr/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/mohsinzia/database-project/clustr/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Users/mohsinzia/database-project/clustr/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Users/mohsinzia/database-project/clustr/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/mohsinzia/database-project/clustr/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/mohsinzia/database-project/clustr/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/mohsinzia/database-project/clustr/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/mohsinzia/database-project/clustr/node_modules/express/lib/router/index.js:175:3)
+
+Error: Invalid Access Token
+    at file:///Users/mohsinzia/database-project/clustr/src/middlewares/auth.middleware.js:29:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+
+Error: Invalid Access Token
+    at file:///Users/mohsinzia/database-project/clustr/src/middlewares/auth.middleware.js:29:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+
+Error: Invalid Access Token
+    at file:///Users/mohsinzia/database-project/clustr/src/middlewares/auth.middleware.js:29:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+
+Error: Invalid Access Token
+    at file:///Users/mohsinzia/database-project/clustr/src/middlewares/auth.middleware.js:29:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+
+Error: User does not exist
+    at file:///Users/mohsinzia/database-project/clustr/src/controllers/user.controller.js:138:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+
+Error: User does not exist
+    at file:///Users/mohsinzia/database-project/clustr/src/controllers/user.controller.js:138:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+
+Error: Failed to send verification email
+    at file:///Users/mohsinzia/database-project/clustr/src/controllers/otp.controller.js:39:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+
+Error: Failed to send verification email
+    at file:///Users/mohsinzia/database-project/clustr/src/controllers/otp.controller.js:39:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+
+Error: Failed to send verification email
+    at file:///Users/mohsinzia/database-project/clustr/src/controllers/otp.controller.js:39:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+
+Error: Failed to send verification email
+    at file:///Users/mohsinzia/database-project/clustr/src/controllers/otp.controller.js:39:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+
+Error: Failed to send verification email
+    at file:///Users/mohsinzia/database-project/clustr/src/controllers/otp.controller.js:39:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+
+Error: Failed to send verification email
+    at file:///Users/mohsinzia/database-project/clustr/src/controllers/otp.controller.js:39:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+
+Error: Failed to send verification email
+    at file:///Users/mohsinzia/database-project/clustr/src/controllers/otp.controller.js:39:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+
+Error: Failed to send verification email
+    at file:///Users/mohsinzia/database-project/clustr/src/controllers/otp.controller.js:39:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+
+Error: Unauthorized request
+    at file:///Users/mohsinzia/database-project/clustr/src/middlewares/auth.middleware.js:29:11
+    at file:///Users/mohsinzia/database-project/clustr/src/utils/asyncHandler.js:4:21
+    at Layer.handle [as handle_request] (/Users/mohsinzia/database-project/clustr/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/mohsinzia/database-project/clustr/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Users/mohsinzia/database-project/clustr/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Users/mohsinzia/database-project/clustr/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/mohsinzia/database-project/clustr/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/mohsinzia/database-project/clustr/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/mohsinzia/database-project/clustr/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/mohsinzia/database-project/clustr/node_modules/express/lib/router/index.js:175:3)
+
+Error: Invalid Access Token
+    at file:///Users/mohsinzia/database-project/clustr/src/middlewares/auth.middleware.js:29:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+
+Error: Invalid Access Token
+    at file:///Users/mohsinzia/database-project/clustr/src/middlewares/auth.middleware.js:29:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+
+Error: Invalid Access Token
+    at file:///Users/mohsinzia/database-project/clustr/src/middlewares/auth.middleware.js:29:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+
+Error: Invalid Access Token
+    at file:///Users/mohsinzia/database-project/clustr/src/middlewares/auth.middleware.js:29:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+
+Error: User does not exist
+    at file:///Users/mohsinzia/database-project/clustr/src/controllers/user.controller.js:138:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+
+Error: User does not exist
+    at file:///Users/mohsinzia/database-project/clustr/src/controllers/user.controller.js:138:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+
+Error: Unauthorized request
+    at file:///Users/mohsinzia/database-project/clustr/src/middlewares/auth.middleware.js:29:11
+    at file:///Users/mohsinzia/database-project/clustr/src/utils/asyncHandler.js:4:21
+    at Layer.handle [as handle_request] (/Users/mohsinzia/database-project/clustr/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/mohsinzia/database-project/clustr/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/Users/mohsinzia/database-project/clustr/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/Users/mohsinzia/database-project/clustr/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/mohsinzia/database-project/clustr/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/mohsinzia/database-project/clustr/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/mohsinzia/database-project/clustr/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/mohsinzia/database-project/clustr/node_modules/express/lib/router/index.js:175:3)
+

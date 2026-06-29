@@ -57,14 +57,13 @@ export const verifyOTP = asyncHandler(async (req, res) => {
     throw new ApiError(400, "Invalid or expired OTP");
   }
 
-  // Mark user as verified
+
   const user = await User.findOneAndUpdate(
     { email },
     { isVerified: true },
     { new: true }
   );
 
-  // Delete OTP record
   await OTP.deleteOne({ _id: otpRecord._id });
 
   return res

@@ -86,9 +86,6 @@ const getUserTweets = asyncHandler(async (req, res) => {
     .json(new ApiResponse(200, result, "Fetched user tweets successfully"));
 });
 
-// backend/controllers/tweet.controller.js
-
-// backend/controllers/tweet.controller.js
 
 const getAllTweets = asyncHandler(async (req, res) => {
   const tweets = await Tweet.aggregate([
@@ -135,7 +132,6 @@ const getAllTweets = asyncHandler(async (req, res) => {
     { $sort: { createdAt: -1 } }
   ]);
 
-  // This puts the array directly into response.data
   return res.status(200).json(
     new ApiResponse(200, tweets, "Tweets fetched successfully")
   );
